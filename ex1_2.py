@@ -5,14 +5,15 @@ import numpy as np
 
 def initial_condition(x: float) -> float:
     """Initial condition for the PDE."""
-    return 1 / (1 + x**2)
+    return np.exp(-(x**2))
 
 
 def u(x: float, t: float) -> float:
     """Solution to the PDE at position x and time t."""
-    # characteristic line: x - a * t = x_0
-    a = 10
-    return initial_condition(x - a * t)
+    # characteristic line: x - c * t = x_0
+
+    decay_factor = np.exp(-t)
+    return decay_factor * initial_condition(x - t**2)
 
 
 def animate_u_time(u: callable, x: np.ndarray, t: np.ndarray) -> None:
@@ -46,8 +47,8 @@ def plot_3d(u: callable, x: np.ndarray, t: np.ndarray) -> None:
 
 
 if __name__ == "__main__":
-    x = np.linspace(-50, 50, 1000)
-    t = np.linspace(0, 10, 1000)
+    x = np.linspace(-5, 5, 1000)
+    t = np.linspace(0, 4, 1000)
 
     animate_u_time(u, x, t)
     plot_3d(u, x, t)
