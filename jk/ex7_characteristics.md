@@ -37,13 +37,20 @@ By doing above we reduced PDE to set of ODEs. To obtain solution:
 - Initial conditions e.g. $u(x,0) = f(x)$ determine the constants.
 
 ---
+
 ## (A)
 
 $$
 u_t + 10u_x = 0, \quad t>0,\; x\in\mathbb{R}, \quad u(x,0)=\frac{1}{1+x^2}
 $$
 
-Characteristics
+In our case:
+
+- $\frac{dx}{dt} = 10$
+- $\frac{du}{dt} = 0$
+
+
+Characteristics:
 
 $$
 \frac{dx}{dt} = 10 \Rightarrow x - 10t = C
