@@ -22,6 +22,18 @@ u_t
 + \frac{dx}{dt} u_x
 $$
 
+For an equation in form of:
+
+$$
+a(x,t) u_t + b(x,t) u_x = c(x,t)
+$$
+
+Comparing parts we get:
+
+- $$
+- $$
+- $$
+
 ---
 ## (A)
 
